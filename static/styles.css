@@ -1,0 +1,78 @@
+body {
+    font-family: Georgia, serif;
+    background-color: lightpink;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.availability {
+    margin-bottom: 20px;
+}
+
+.availability h2 {
+    color: #007bff;
+}
+
+.availability ul {
+    list-style: none;
+    padding: 0;
+}
+
+.availability li {
+    margin-bottom: 10px;
+}
+
+.availability span {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.transfer h2 {
+    color: #007bff;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}

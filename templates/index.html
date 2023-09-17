@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Transfer App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Hospital Transfer App</h1>
+    <h2>Bed Availability</h2>
+    <ul>
+        {% for hospital in hospitals %}
+            <li>{{ hospital['name'] }} - Beds Available: {{ hospital['beds_available'] }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Transfer Patient</h2>
+    <form method="POST" action="/transfer">
+        <label for="hospital">Hospital:</label>
+        <select name="hospital" id="hospital">
+            {% for hospital in hospitals %}
+                <option value="{{ hospital['name'] }}">{{ hospital['name'] }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="patient">Patient Name:</label>
+        <input type="text" name="patient" required>
+        <br>
+        <label for="beds">Beds Needed:</label>
+        <input type="number" name="beds" required>
+        <br>
+        <input type="submit" value="Transfer">
+    </form>
+</body>
+</html>
+
